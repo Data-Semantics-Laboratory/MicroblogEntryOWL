@@ -1,153 +1,243 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.example.org/dase/MicroblogEntry"
+<rdf:RDF xmlns="https://daselab.org/microblogentry#"
+     xml:base="https://daselab.org/microblogentry"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.example.org/dase/MicroblogEntry">
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="untitled-ontology-51" IRI="http://www.semanticweb.org/cogs/ontologies/2017/6/untitled-ontology-51#"/>
-    <Declaration>
-        <ObjectProperty IRI="#hasTrustMetric"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#referencesTopic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MicroblogEntry"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#TrustMetric"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#writtenAt"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasPayload"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ReportingEvent"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Topic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Payload"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasTimestamp"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Media"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#writtenBy"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Location"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#presentedOn"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Instant"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="#MicroblogEntry"/>
-        <Class IRI="#ReportingEvent"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#MicroblogEntry"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#hasPayload"/>
-            <Class IRI="#Payload"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#MicroblogEntry"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#hasTimestamp"/>
-            <Class IRI="#Instant"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#MicroblogEntry"/>
-        <ObjectMaxCardinality cardinality="1">
-            <ObjectProperty IRI="#writtenAt"/>
-            <Class IRI="#Location"/>
-        </ObjectMaxCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Payload"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="#referencesTopic"/>
-            <Class IRI="#Topic"/>
-        </ObjectMinCardinality>
-    </SubClassOf>
-    <DisjointClasses>
-        <Class IRI="#Instant"/>
-        <Class IRI="#Location"/>
-        <Class IRI="#Media"/>
-        <Class IRI="#Payload"/>
-        <Class IRI="#ReportingEvent"/>
-        <Class IRI="#TrustMetric"/>
-    </DisjointClasses>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasPayload"/>
-        <Class IRI="#MicroblogEntry"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasTimestamp"/>
-        <Class IRI="#MicroblogEntry"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasTrustMetric"/>
-        <Class IRI="#MicroblogEntry"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#presentedOn"/>
-        <Class IRI="#MicroblogEntry"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#referencesTopic"/>
-        <Class IRI="#Payload"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#writtenAt"/>
-        <Class IRI="#MicroblogEntry"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasPayload"/>
-        <Class IRI="#Payload"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasTimestamp"/>
-        <Class IRI="#Instant"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasTrustMetric"/>
-        <Class IRI="#TrustMetric"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#presentedOn"/>
-        <Class IRI="#Media"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#referencesTopic"/>
-        <Class IRI="#Topic"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#writtenAt"/>
-        <Class IRI="#Location"/>
-    </ObjectPropertyRange>
-</Ontology>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://daselab.org/microblogentry"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://daselab.org/microblogentry#hasPayload -->
+
+    <owl:ObjectProperty rdf:about="https://daselab.org/microblogentry#hasPayload"/>
+    
+
+
+    <!-- https://daselab.org/microblogentry#hasReference -->
+
+    <owl:ObjectProperty rdf:about="https://daselab.org/microblogentry#hasReference"/>
+    
+
+
+    <!-- https://daselab.org/microblogentry#hasTrustMetric -->
+
+    <owl:ObjectProperty rdf:about="https://daselab.org/microblogentry#hasTrustMetric"/>
+    
+
+
+    <!-- https://daselab.org/microblogentry#presentedOn -->
+
+    <owl:ObjectProperty rdf:about="https://daselab.org/microblogentry#presentedOn"/>
+    
+
+
+    <!-- https://daselab.org/microblogentry#writtenAt -->
+
+    <owl:ObjectProperty rdf:about="https://daselab.org/microblogentry#writtenAt"/>
+    
+
+
+    <!-- https://daselab.org/microblogentry#writtenBy -->
+
+    <owl:ObjectProperty rdf:about="https://daselab.org/microblogentry#writtenBy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://daselab.org/microblogentry#hasTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="https://daselab.org/microblogentry#hasTimestamp"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://daselab.org/microblogentry#ActualEventView -->
+
+    <owl:Class rdf:about="https://daselab.org/microblogentry#ActualEventView"/>
+    
+
+
+    <!-- https://daselab.org/microblogentry#Author -->
+
+    <owl:Class rdf:about="https://daselab.org/microblogentry#Author"/>
+    
+
+
+    <!-- https://daselab.org/microblogentry#EntityWithProvenance -->
+
+    <owl:Class rdf:about="https://daselab.org/microblogentry#EntityWithProvenance"/>
+    
+
+
+    <!-- https://daselab.org/microblogentry#Location -->
+
+    <owl:Class rdf:about="https://daselab.org/microblogentry#Location"/>
+    
+
+
+    <!-- https://daselab.org/microblogentry#Media -->
+
+    <owl:Class rdf:about="https://daselab.org/microblogentry#Media"/>
+    
+
+
+    <!-- https://daselab.org/microblogentry#MicroblogEntry -->
+
+    <owl:Class rdf:about="https://daselab.org/microblogentry#MicroblogEntry">
+        <rdfs:subClassOf rdf:resource="https://daselab.org/microblogentry#ActualEventView"/>
+        <rdfs:subClassOf rdf:resource="https://daselab.org/microblogentry#EntityWithProvenance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://daselab.org/microblogentry#hasPayload"/>
+                <owl:allValuesFrom rdf:resource="https://daselab.org/microblogentry#Payload"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://daselab.org/microblogentry#hasTrustMetric"/>
+                <owl:allValuesFrom rdf:resource="https://daselab.org/microblogentry#TrustMetric"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://daselab.org/microblogentry#presentedOn"/>
+                <owl:allValuesFrom rdf:resource="https://daselab.org/microblogentry#Media"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://daselab.org/microblogentry#writtenAt"/>
+                <owl:allValuesFrom rdf:resource="https://daselab.org/microblogentry#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://daselab.org/microblogentry#writtenBy"/>
+                <owl:allValuesFrom rdf:resource="https://daselab.org/microblogentry#Author"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://daselab.org/microblogentry#hasTimestamp"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://daselab.org/microblogentry#Payload -->
+
+    <owl:Class rdf:about="https://daselab.org/microblogentry#Payload"/>
+    
+
+
+    <!-- https://daselab.org/microblogentry#Reference -->
+
+    <owl:Class rdf:about="https://daselab.org/microblogentry#Reference"/>
+    
+
+
+    <!-- https://daselab.org/microblogentry#TrustMetric -->
+
+    <owl:Class rdf:about="https://daselab.org/microblogentry#TrustMetric"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="https://daselab.org/microblogentry#hasPayload"/>
+        <owl:someValuesFrom rdf:resource="https://daselab.org/microblogentry#Payload"/>
+        <rdfs:subClassOf rdf:resource="https://daselab.org/microblogentry#MicroblogEntry"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="https://daselab.org/microblogentry#hasReference"/>
+        <owl:someValuesFrom rdf:resource="https://daselab.org/microblogentry#Reference"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://daselab.org/microblogentry#MicroblogEntry"/>
+                    <rdf:Description rdf:about="https://daselab.org/microblogentry#Payload"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="https://daselab.org/microblogentry#hasTrustMetric"/>
+        <owl:someValuesFrom rdf:resource="https://daselab.org/microblogentry#TrustMetric"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://daselab.org/microblogentry#Author"/>
+                    <rdf:Description rdf:about="https://daselab.org/microblogentry#MicroblogEntry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="https://daselab.org/microblogentry#presentedOn"/>
+        <owl:someValuesFrom rdf:resource="https://daselab.org/microblogentry#Media"/>
+        <rdfs:subClassOf rdf:resource="https://daselab.org/microblogentry#MicroblogEntry"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="https://daselab.org/microblogentry#writtenAt"/>
+        <owl:someValuesFrom rdf:resource="https://daselab.org/microblogentry#Location"/>
+        <rdfs:subClassOf rdf:resource="https://daselab.org/microblogentry#MicroblogEntry"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="https://daselab.org/microblogentry#writtenBy"/>
+        <owl:someValuesFrom rdf:resource="https://daselab.org/microblogentry#Author"/>
+        <rdfs:subClassOf rdf:resource="https://daselab.org/microblogentry#MicroblogEntry"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="https://daselab.org/microblogentry#hasTimestamp"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:subClassOf rdf:resource="https://daselab.org/microblogentry#MicroblogEntry"/>
+    </owl:Restriction>
+</rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
 
